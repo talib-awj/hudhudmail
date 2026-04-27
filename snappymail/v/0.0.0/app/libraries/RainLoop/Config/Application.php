@@ -176,16 +176,16 @@ class Application extends \RainLoop\Config\AbstractConfig
 
 			'webmail' => array(
 
-				'title'                       => array('SnappyMail Webmail', 'Text displayed as page title'),
-				'loading_description'         => array('SnappyMail', 'Text displayed on startup'),
+				'title'                       => array("\u0647\u064f\u062f\u0647\u064f\u062f \u2014 \u0628\u0631\u064a\u062f\u0643 \u0628\u0647\u064a\u0626\u0629 \u0639\u0631\u0628\u064a\u0629", 'Text displayed as page title'),
+				'loading_description'         => array("\u0623\u0647\u0644\u064b\u0627 \u0628\u0643 \u0641\u064a \u0647\u062f\u0647\u062f", 'Text displayed on startup'),
 				'favicon_url'                 => array(''),
 				'app_path'                    => array(''),
 
-				'theme'                       => array('Default', 'Theme used by default'),
+				'theme'                       => array('Hudhud', 'Theme used by default'),
 				'allow_themes'                => array(true, 'Allow theme selection on settings screen'),
 				'allow_user_background'       => array(false),
 
-				'language'                    => array('en', 'Language used by default'),
+				'language'                    => array('ar', 'Language used by default'),
 				'allow_languages_on_settings' => array(true, 'Allow language selection on settings screen'),
 
 				'allow_additional_accounts'   => array(true),

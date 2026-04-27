@@ -1,0 +1,281 @@
+/*
+ * ثيم هُدهُد — Hudhud Theme
+ * بريدك بهيئة عربية
+ * مبني على SnappyMail · AGPLv3
+ *
+ * الألوان مستوحاة من ريش طائر الهدهد:
+ *   ذهبي عسلي (#BA7517) · كريمي (#FAEEDA) · بنّي غامق (#633806)
+ */
+
+/* === خطّ Tajawal المحلّي === */
+@font-face {
+	font-family: 'Tajawal';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../../static/fonts/tajawal/Tajawal-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Tajawal';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../../static/fonts/tajawal/Tajawal-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Tajawal';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../../static/fonts/tajawal/Tajawal-Bold.ttf") format("truetype");
+}
+
+:root {
+	color-scheme: light;
+
+	/* === BRAND === */
+	--hudhud-brand: #BA7517;
+	--hudhud-brand-light: #FAEEDA;
+	--hudhud-brand-dark: #633806;
+	--hudhud-brand-mid: #854F0B;
+
+	/* === MAIN === */
+	--main-color: #1A1A1A;
+	--main-bg-color: #EDEAE3;
+	--main-bg-image: none;
+
+	/* === LINK === */
+	--link-color: #BA7517;
+
+	/* === BORDER === */
+	--border-color: rgba(0, 0, 0, 0.08);
+	--hr-color: rgba(0, 0, 0, 0.08);
+
+	/* === PANEL === */
+	--panel-bg-clr: #F5F3ED;
+
+	/* === LOADING === */
+	--loading-color: #BA7517;
+	--loading-text-shadow: none;
+
+	/* === LOGIN === */
+	--login-color: #1A1A1A;
+	--login-bg-color: rgba(255, 255, 255, 0.95);
+	--login-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+	--login-border: 1px solid rgba(0, 0, 0, 0.08);
+	--login-border-radius: 12px;
+
+	/* === MENU === */
+	--dropdown-menu-color: #1A1A1A;
+	--dropdown-menu-bg-color: #ffffff;
+	--dropdown-menu-hover-bg-color: #FAEEDA;
+	--dropdown-menu-hover-color: #633806;
+	--dropdown-menu-disable-color: #8A8A8A;
+
+	/* === FOLDERS === */
+	--folders-color: #555555;
+	--folders-disabled-color: #8A8A8A;
+	--folders-selected-color: #633806;
+	--folders-selected-bg-color: #FAEEDA;
+	--folders-focused-color: #633806;
+	--folders-focused-bg-color: #FAEEDA;
+	--folders-hover-color: #1A1A1A;
+	--folders-hover-bg-color: rgba(0, 0, 0, 0.03);
+	--folders-drop-color: #633806;
+	--folders-drop-bg-color: #FAEEDA;
+
+	/* === SETTINGS MENU === */
+	--settings-menu-color: #555555;
+	--settings-menu-selected-color: #633806;
+	--settings-menu-selected-bg-color: #FAEEDA;
+	--settings-menu-hover-color: #1A1A1A;
+	--settings-menu-hover-bg-color: rgba(0, 0, 0, 0.03);
+
+	/* === MESSAGE LIST === */
+	--message-list-toolbar-bg-color: #ffffff;
+	--message-header-bg-clr: #F5F3ED;
+
+	/* === DIALOG === */
+	--dialog-clr: #1A1A1A;
+	--dialog-bg-clr: #ffffff;
+	--dialog-border-clr: rgba(0, 0, 0, 0.08);
+
+	/* === FORMS === */
+	--btn-clr: #1A1A1A;
+	--btn-bg-clr: #ffffff;
+	--input-clr: #1A1A1A;
+	--input-bg-clr: #ffffff;
+
+	/* === TABLE === */
+	--table-bg-clr: #ffffff;
+	--table-header-bg-clr: #F5F3ED;
+
+	/* === PRIMARY BUTTON === */
+	--btn-primary-clr: #ffffff;
+	--btn-primary-bg-clr: #BA7517;
+	--btn-primary-border-clr: #BA7517;
+}
+
+/* === خطّ عربي عام === */
+html, body,
+input, select, textarea, button,
+.b-folders, .messageList, .messageView,
+.b-settings-menu, .e-settings,
+.b-login, #rl-loading-desc {
+	font-family: 'Tajawal', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* === شريط الأدوات العلوي === */
+.thm-message-list-top-toolbar, .thm-message-list-bottom-toolbar {
+	background-image: none !important;
+	background-color: #ffffff !important;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* === زرّ الإنشاء === */
+.b-folders .e-item.e-link.btn.btn-compose,
+button.btn-compose {
+	background-color: #BA7517 !important;
+	color: #ffffff !important;
+	border: none !important;
+	border-radius: 8px !important;
+	font-weight: 500 !important;
+	transition: background-color 0.15s ease !important;
+}
+.b-folders .e-item.e-link.btn.btn-compose:hover,
+button.btn-compose:hover {
+	background-color: #854F0B !important;
+}
+
+/* === الرسالة المحدّدة في القائمة === */
+.messageList .b-content .e-item.selected {
+	background-color: #FAEEDA !important;
+	border-right: 3px solid #BA7517 !important;
+}
+
+/* === شريط غير مقروءة === */
+.messageList .b-content .e-item.unseen .from,
+.messageList .b-content .e-item.unseen .subject {
+	font-weight: 700 !important;
+}
+
+/* === نقطة الرسالة غير المقروءة === */
+.messageList .b-content .e-item.unseen::after {
+	content: '';
+	width: 7px;
+	height: 7px;
+	background: #BA7517;
+	border-radius: 50%;
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* === أزرار الإجراءات === */
+.btn.btn-default {
+	border: 1px solid rgba(0, 0, 0, 0.15) !important;
+	border-radius: 8px !important;
+	transition: all 0.15s ease !important;
+}
+.btn.btn-default:hover {
+	background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+.btn.btn-primary,
+.btn.btn-success {
+	background-color: #BA7517 !important;
+	border-color: #BA7517 !important;
+	color: #ffffff !important;
+	border-radius: 8px !important;
+}
+.btn.btn-primary:hover,
+.btn.btn-success:hover {
+	background-color: #854F0B !important;
+	border-color: #854F0B !important;
+}
+
+/* === حقول الإدخال === */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+	border: 1px solid rgba(0, 0, 0, 0.08) !important;
+	border-radius: 8px !important;
+	background-color: #F5F3ED !important;
+	transition: all 0.15s ease !important;
+}
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: #BA7517 !important;
+	background-color: #ffffff !important;
+	box-shadow: 0 0 0 2px rgba(186, 117, 23, 0.1) !important;
+}
+
+/* === الشريط الجانبي === */
+.b-folders {
+	background-color: #F5F3ED !important;
+	border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* === القارئ === */
+.messageView .b-content .subject {
+	font-size: 22px !important;
+	font-weight: 700 !important;
+	line-height: 1.4 !important;
+}
+
+/* === شريط التمرير === */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 0, 0, 0.25);
+}
+
+/* === شاشة الدخول === */
+#rl-loading {
+	background-color: #EDEAE3 !important;
+}
+
+#rl-loading-desc {
+	color: #BA7517 !important;
+	font-size: 18px !important;
+	font-weight: 500 !important;
+}
+
+/* === الفوتر: إشارة SnappyMail === */
+.b-login .login_footer::after {
+	content: 'مبنيّ على SnappyMail';
+	display: block;
+	text-align: center;
+	color: #8A8A8A;
+	font-size: 11px;
+	margin-top: 12px;
+}
+
+/* === تحسينات RTL إضافية === */
+[dir="rtl"] .messageList .b-content .e-item.selected {
+	border-right: 3px solid #BA7517 !important;
+	border-left: none !important;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+	.b-folders {
+		border-left: none !important;
+	}
+}

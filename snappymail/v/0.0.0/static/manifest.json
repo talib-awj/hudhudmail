@@ -1,10 +1,12 @@
 {
-	"name": "SnappyMail Webmail",
-	"short_name": "SnappyMail",
-	"description": "Simple, modern & fast web-based email client",
+	"name": "هُدهُد — بريدك بهيئة عربية",
+	"short_name": "هُدهُد",
+	"description": "عميل بريد ويب عصري بهوية عربية، مبنيّ على SnappyMail",
 	"display": "standalone",
-	"background_color": "white",
-	"theme_color": "black",
+	"dir": "rtl",
+	"lang": "ar",
+	"background_color": "#EDEAE3",
+	"theme_color": "#BA7517",
 	"icons": [{
 		"src": "apple-touch-icon.png",
 		"sizes": "64x64",

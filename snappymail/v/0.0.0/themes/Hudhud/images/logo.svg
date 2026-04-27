@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <!-- Hudhud logo: bird icon + Arabic text - for welcome screen -->
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#BA7517"/>
+      <stop offset="100%" style="stop-color:#854F0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bird icon container -->
+  <rect x="0" y="6" width="38" height="38" rx="8" fill="url(#brandGrad)"/>
+
+  <!-- Crest feathers -->
+  <path d="M20 12 L20 17 L24 14 Z" fill="#fff"/>
+  <path d="M21 14 L21 18 L25 16 Z" fill="#fff" opacity="0.75"/>
+
+  <!-- Body -->
+  <path d="M10 25 Q10 20 17 20 Q24 20 26 25 Q27 28 24 30 L13 30 Q9 28 10 25 Z" fill="#fff"/>
+
+  <!-- Eye -->
+  <circle cx="21" cy="24" r="1.5" fill="#BA7517"/>
+
+  <!-- Beak -->
+  <path d="M26 25 L31 23.5 L27.5 27 Z" fill="#fff"/>
+
+  <!-- Tail stripe -->
+  <rect x="11" y="28" width="4" height="1.2" rx="0.6" fill="#BA7517"/>
+
+  <!-- Arabic text: هُدهُد -->
+  <text x="48" y="33" font-family="Tajawal, sans-serif" font-size="28" font-weight="700" fill="#1A1A1A" direction="rtl">هُدهُد</text>
+</svg>
