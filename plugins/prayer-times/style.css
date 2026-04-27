@@ -1,0 +1,93 @@
+/* لوحة أوقات الصلاة */
+.hudhud-prayer-panel {
+	margin: 12px 0 0;
+	padding: 12px;
+	background: rgba(186, 117, 23, 0.06);
+	border-radius: 8px;
+	font-size: 12.5px;
+}
+
+.hudhud-prayer-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.hudhud-prayer-title {
+	font-weight: 700;
+	color: #633806;
+	font-size: 13px;
+}
+
+.hudhud-prayer-city {
+	font-size: 11px;
+	color: #8A8A8A;
+}
+
+.hudhud-prayer-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.hudhud-prayer-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 8px;
+	border-radius: 6px;
+	transition: background 0.1s;
+}
+
+.hudhud-prayer-item.next {
+	background: #FAEEDA;
+	font-weight: 500;
+}
+
+.hudhud-prayer-name {
+	color: #555;
+}
+
+.hudhud-prayer-item.next .hudhud-prayer-name {
+	color: #633806;
+}
+
+.hudhud-prayer-time {
+	color: #1A1A1A;
+	font-weight: 500;
+	font-variant-numeric: tabular-nums;
+}
+
+/* الوضع الداكن */
+[data-theme*="Dark"] .hudhud-prayer-panel,
+.rl-theme-dark .hudhud-prayer-panel {
+	background: rgba(212, 146, 46, 0.08);
+}
+
+[data-theme*="Dark"] .hudhud-prayer-title,
+.rl-theme-dark .hudhud-prayer-title {
+	color: #F5C97A;
+}
+
+[data-theme*="Dark"] .hudhud-prayer-item.next,
+.rl-theme-dark .hudhud-prayer-item.next {
+	background: #2E2518;
+}
+
+[data-theme*="Dark"] .hudhud-prayer-item.next .hudhud-prayer-name,
+.rl-theme-dark .hudhud-prayer-item.next .hudhud-prayer-name {
+	color: #F5C97A;
+}
+
+[data-theme*="Dark"] .hudhud-prayer-time,
+.rl-theme-dark .hudhud-prayer-time {
+	color: #E8E4DD;
+}
+
+[data-theme*="Dark"] .hudhud-prayer-header,
+.rl-theme-dark .hudhud-prayer-header {
+	border-bottom-color: rgba(255, 255, 255, 0.06);
+}

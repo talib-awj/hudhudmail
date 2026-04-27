@@ -1,0 +1,31 @@
+/* أنماط التاريخ الهجري */
+.hudhud-hijri-date {
+	color: #854F0B;
+	font-size: 0.9em;
+	font-weight: 500;
+	margin-right: 4px;
+}
+
+.hudhud-hijri-bar {
+	text-align: center;
+	padding: 6px 12px;
+	font-size: 12px;
+	color: #854F0B;
+	background: #FAEEDA;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	font-weight: 500;
+	direction: rtl;
+}
+
+/* الوضع الداكن */
+[data-theme*="Dark"] .hudhud-hijri-date,
+.rl-theme-dark .hudhud-hijri-date {
+	color: #F5C97A;
+}
+
+[data-theme*="Dark"] .hudhud-hijri-bar,
+.rl-theme-dark .hudhud-hijri-bar {
+	color: #F5C97A;
+	background: #2E2518;
+	border-bottom-color: rgba(255, 255, 255, 0.06);
+}
