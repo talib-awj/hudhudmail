@@ -1,0 +1,56 @@
+{
+    "IMAP": {
+        "host": "mail.bahja.om",
+        "port": 993,
+        "type": 1,
+        "timeout": 300,
+        "shortLogin": false,
+        "lowerLogin": true,
+        "sasl": ["SCRAM-SHA-256", "SCRAM-SHA-1", "PLAIN", "LOGIN"],
+        "ssl": {
+            "verify_peer": true,
+            "verify_peer_name": true,
+            "allow_self_signed": false,
+            "SNI_enabled": true,
+            "disable_compression": true,
+            "security_level": 1
+        }
+    },
+    "SMTP": {
+        "host": "mail.bahja.om",
+        "port": 465,
+        "type": 1,
+        "timeout": 60,
+        "shortLogin": false,
+        "lowerLogin": true,
+        "sasl": ["SCRAM-SHA-256", "SCRAM-SHA-1", "PLAIN", "LOGIN"],
+        "ssl": {
+            "verify_peer": true,
+            "verify_peer_name": true,
+            "allow_self_signed": false,
+            "SNI_enabled": true,
+            "disable_compression": true,
+            "security_level": 1
+        },
+        "useAuth": true,
+        "setSender": false,
+        "usePhpMail": false
+    },
+    "Sieve": {
+        "host": "mail.bahja.om",
+        "port": 4190,
+        "type": 0,
+        "timeout": 10,
+        "shortLogin": false,
+        "lowerLogin": true,
+        "sasl": ["PLAIN", "LOGIN"],
+        "ssl": {
+            "verify_peer": false,
+            "verify_peer_name": false,
+            "allow_self_signed": true,
+            "SNI_enabled": true
+        },
+        "enabled": true
+    },
+    "whiteList": ""
+}
