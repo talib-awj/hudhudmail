@@ -10,7 +10,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url("../../static/fonts/tajawal/Tajawal-Regular.ttf") format("truetype");
+	src: url("/snappymail/v/0.0.0/static/fonts/tajawal/Tajawal-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -18,7 +18,7 @@
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
-	src: url("../../static/fonts/tajawal/Tajawal-Medium.ttf") format("truetype");
+	src: url("/snappymail/v/0.0.0/static/fonts/tajawal/Tajawal-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -26,7 +26,7 @@
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
-	src: url("../../static/fonts/tajawal/Tajawal-Bold.ttf") format("truetype");
+	src: url("/snappymail/v/0.0.0/static/fonts/tajawal/Tajawal-Bold.ttf") format("truetype");
 }
 
 :root {
