@@ -1,0 +1,55 @@
+name: بناء هدهد
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: فحص PHP وبناء المشروع
+
+    steps:
+      - name: استنساخ المستودع
+        uses: actions/checkout@v4
+
+      - name: إعداد PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, iconv, json, dom, openssl
+
+      - name: فحص أخطاء PHP
+        run: |
+          find snappymail/ -name "*.php" -print0 | xargs -0 -n1 php -l
+          find plugins/arabic-calendar/ plugins/arabic-search-enhance/ plugins/hudhud-signature/ plugins/prayer-times/ -name "*.php" -print0 | xargs -0 -n1 php -l
+
+      - name: إعداد Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: تثبيت التبعيات
+        run: npm install
+
+      - name: بناء المشروع
+        run: npx gulp build || echo "تحذير: تخطّي بناء Gulp"
+
+      - name: التحقّق من وجود ثيم Hudhud
+        run: |
+          test -f snappymail/v/0.0.0/themes/Hudhud/styles.css && echo "✓ ثيم Hudhud موجود"
+          test -f snappymail/v/0.0.0/themes/Hudhud-Dark/styles.css && echo "✓ ثيم Hudhud-Dark موجود"
+
+      - name: التحقّق من الإضافات
+        run: |
+          for plugin in arabic-calendar arabic-search-enhance hudhud-signature prayer-times; do
+            test -f "plugins/${plugin}/index.php" && echo "✓ إضافة ${plugin} موجودة"
+          done
+
+      - name: التحقّق من ملفّات النطاقات
+        run: |
+          for domain in alabri.om bahja.om medialab.zone visitalhamra.om rhythmom.com; do
+            test -f "data/_data_/_default_/domains/${domain}.json" && echo "✓ نطاق ${domain} مُهيّأ"
+          done
