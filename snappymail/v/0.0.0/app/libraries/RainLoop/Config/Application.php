@@ -176,8 +176,8 @@ class Application extends \RainLoop\Config\AbstractConfig
 
 			'webmail' => array(
 
-				'title'                       => array("\u0647\u064f\u062f\u0647\u064f\u062f \u2014 \u0628\u0631\u064a\u062f\u0643 \u0628\u0647\u064a\u0626\u0629 \u0639\u0631\u0628\u064a\u0629", 'Text displayed as page title'),
-				'loading_description'         => array("\u0623\u0647\u0644\u064b\u0627 \u0628\u0643 \u0641\u064a \u0647\u062f\u0647\u062f", 'Text displayed on startup'),
+				'title'                       => array('هُدهُد — بريدك بهيئة عربية', 'Text displayed as page title'),
+				'loading_description'         => array('أهلًا بك في هدهد', 'Text displayed on startup'),
 				'favicon_url'                 => array(''),
 				'app_path'                    => array(''),
 
